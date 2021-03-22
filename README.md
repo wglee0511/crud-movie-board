@@ -1,0 +1,9 @@
+# CRUD-movie-board
+
+- Using MongoDB, Express, React, Node JS
+
+1. Set up Api server
+
+- Babel set up
+- Express server
+- Express server connect with MongoDB

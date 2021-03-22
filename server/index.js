@@ -1,9 +1,13 @@
 import express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
+import dotenv from "dotenv";
+import db from "./db";
+
+dotenv.config();
 
 const app = express();
-const APIPORT = 3000;
+const APIPORT = process.env.APIPORT;
 
 app.use(
   bodyParser.urlencoded({
@@ -17,6 +21,9 @@ app.get("/", (req, res) => {
   res.send("hello world");
 });
 
+db.on("error", () => console.log(`database error : ${error} 💔`));
+db.once("open", () => console.log(" Database open 💘"));
+
 app.listen(APIPORT, () => {
-  console.log(`⭕ http://localhost:${APIPORT}`);
+  console.log(`Server is running on ⭕ http://localhost:${APIPORT}`);
 });
