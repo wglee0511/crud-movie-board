@@ -1,0 +1,24 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@babel/core": "^7.13.10",
+    "@babel/node": "^7.13.10",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.1",
+    "nodemon": "^2.0.7"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.13.10"
+  },
+  "scripts": {
+    "babel-node": "babel-node --presets='@babel/preset-env' --ignore='foo|bar|baz'",
+    "start": "nodemon --exec babel-node --presets=@babel/preset-env  -- ./index.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
