@@ -20,11 +20,11 @@ const createMovie = (req, res) => {
     .catch((error) => res.status(400).json({ success: false, error: error }));
 };
 
-const getMovie = (req, res) => {
+const getMovie = async (req, res) => {
   const {
     params: { id },
   } = req;
-  const findMovie = new movieData.findById(id, (err, data) => {
+  const findMovie = await movieData.findById(id, (err, data) => {
     if (err) {
       return res.status(400).json({
         success: false,
@@ -69,6 +69,48 @@ const getMovies = async (req, res) => {
       })
       .catch((error) => console.error(error));
   });
+  return movies;
 };
 
-export { createMovie, getMovie, getMovies };
+const upDateMovie = async (req, res) => {
+  const body = req.body;
+  const {
+    params: { id },
+  } = req;
+  if (!body) {
+    return res.status(400).json({
+      success: false,
+      error: "You must submmit body to update",
+    });
+  }
+  const findMovie = await movieData.findById(id, (err, data) => {
+    if (err) {
+      return res.status(404).json({
+        error: err,
+        message: "Movie not found",
+      });
+    }
+    data.name = body.name;
+    data.time = body.time;
+    data.rating = body.rating;
+    data
+      ?.save()
+      .then(() =>
+        res.status(200).json({
+          success: true,
+          id: data.id,
+          message: "Movie updated",
+        })
+      )
+      .catch((error) =>
+        res.status(404).json({
+          error: error,
+          message,
+        })
+      );
+  });
+
+  return findMovie;
+};
+
+export { createMovie, getMovie, getMovies, upDateMovie };

@@ -7,4 +7,4 @@
 - Babel set up
 - Express server
 - Express server connect with MongoDB
-- REST API create movie, get movies, get Movie
+- REST API create movie, get movies, get movie, update movie
