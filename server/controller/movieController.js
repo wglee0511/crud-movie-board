@@ -31,7 +31,7 @@ const getMovie = async (req, res) => {
         error: err,
       });
     }
-    if (!findMovie) {
+    if (!data) {
       return res.status(404).json({
         success: false,
         error: "Movie not found",
@@ -113,4 +113,33 @@ const upDateMovie = async (req, res) => {
   return findMovie;
 };
 
-export { createMovie, getMovie, getMovies, upDateMovie };
+const deleteMovie = async (req, res) => {
+  const {
+    params: { id },
+  } = req;
+
+  const deleteMovieById = await movieData.findByIdAndDelete(id, (err, data) => {
+    if (err) {
+      return res.status(400).json({
+        success: false,
+        error: err,
+      });
+    }
+    if (!data) {
+      return res.status(404).json({
+        success: false,
+        error: "Movie not found",
+      });
+    }
+    return res
+      .status(200)
+      .json({
+        success: true,
+        data: data,
+      })
+      .catch((error) => console.error(error));
+  });
+  return deleteMovieById;
+};
+
+export { createMovie, getMovie, getMovies, upDateMovie, deleteMovie };
