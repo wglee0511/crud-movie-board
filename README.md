@@ -8,3 +8,4 @@
 - Express server
 - Express server connect with MongoDB
 - REST API create movie, get movies, get movie, update movie, delete movie
+- Confirm at Postman
