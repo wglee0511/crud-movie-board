@@ -49,3 +49,15 @@ npm start
 ---
 
 ## Set up Frontend
+
+---
+
+- Navbar (Using react-bootstrap)
+
+```
+(Windows cmd, powershell)
+cd client
+npm start
+```
+
+---
