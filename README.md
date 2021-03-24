@@ -14,11 +14,19 @@
 - Express
 - React
 - Node JS
-  - Express
+
+- Backend
   - Babel
   - mongoose
   - dotenv
   - nodemon
+- Frontend
+  - create-react-app
+  - react-router-dom
+  - Bootstrap
+  - style-components
+  - axios
+  - react-table
 
 ---
 
