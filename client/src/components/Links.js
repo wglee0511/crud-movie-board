@@ -14,7 +14,7 @@ const StyledNavbar = styled(Navbar.Brand)`
 `;
 
 const StyledNav = styled(Nav)`
-  margin-left: 50px;
+  margin-left: 100px;
 `;
 
 export default function Links(props) {
