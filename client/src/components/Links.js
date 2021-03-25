@@ -1,10 +1,9 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
 import styled from "styled-components";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Logo from "./Logo";
-import theme from "./theme";
+import { LinkContainer } from "react-router-bootstrap";
 
 const StyledNavbar = styled(Navbar.Brand)`
   display: flex;
@@ -20,13 +19,17 @@ const StyledNav = styled(Nav)`
 export default function Links(props) {
   return (
     <>
-      <StyledNavbar href="/">
+      <StyledNavbar>
         <Logo />
         <span>Movie Board</span>
       </StyledNavbar>
       <StyledNav className="mr-auto">
-        <Nav.Link href="/movies/list">Movies List</Nav.Link>
-        <Nav.Link href="/movies/create">Create</Nav.Link>
+        <LinkContainer to="/movie/list">
+          <Nav.Link>Movies List</Nav.Link>
+        </LinkContainer>
+        <LinkContainer to="/movie/create">
+          <Nav.Link>Create</Nav.Link>
+        </LinkContainer>
       </StyledNav>
     </>
   );

@@ -53,6 +53,7 @@ npm start
 ---
 
 - Navbar (Using react-bootstrap)
+- MovieList (Using react-bootstrap)
 
 ```
 (Windows cmd, powershell)
