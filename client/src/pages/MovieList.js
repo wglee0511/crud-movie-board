@@ -8,6 +8,9 @@ import { Link } from "react-router-dom";
 const Wrapper = styled.div`
   padding: 0 15% 0 15%;
 `;
+const Text = styled.span`
+  color: white;
+`;
 
 export default function MovieList(props) {
   const [movies, setMovies] = useState([]);
@@ -46,7 +49,9 @@ export default function MovieList(props) {
                 <tr key={movie._id}>
                   <td>{movie.rating}</td>
                   <td>
-                    <Link to={`/movie/update/${movie._id}`}>{movie.name}</Link>
+                    <Link to={`/movie/update/${movie._id}`}>
+                      <Text>{movie.name}</Text>
+                    </Link>
                   </td>
                   <td>{movie.time.join(" / ")}</td>
                 </tr>

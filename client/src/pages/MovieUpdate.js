@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
-import { getMovieById, updateMovie } from "../api";
+import { getMovieById, updateMovie, deleteMovie } from "../api";
 
 const Wrapper = styled.div.attrs({
   className: "form-group",
@@ -105,7 +105,13 @@ export default function MovieUpdate(props) {
     }
   };
 
-  const handleDeleteMovie = async () => {};
+  const handleDeleteMovie = async () => {
+    const confirmDel = window.confirm("Are you sure?");
+    if (confirmDel) {
+      await deleteMovie(paraId);
+      window.location.reload();
+    }
+  };
 
   return (
     <Wrapper>

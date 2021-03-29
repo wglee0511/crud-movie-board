@@ -56,7 +56,8 @@ npm start
 - MovieList (Using react-bootstrap)
 - Read movie list from database
 - Insert movie to database
-- Update movie to database
+- Update movie
+- Update movie
 
 ```
 (Windows cmd, powershell)
