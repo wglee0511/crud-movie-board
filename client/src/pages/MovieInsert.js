@@ -104,7 +104,7 @@ export default function MovieInsert(props) {
 
       <ButtonWrapper>
         <Button onClick={handleInsertMovie}>Insert</Button>
-        <CancelButton href={"/movie/list"}>Cancel</CancelButton>
+        <CancelButton href={"/movie/list"}>Go To list</CancelButton>
       </ButtonWrapper>
     </Wrapper>
   );

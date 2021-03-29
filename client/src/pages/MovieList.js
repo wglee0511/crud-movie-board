@@ -3,6 +3,7 @@ import { getAllMovies } from "../api/index";
 import styled from "styled-components";
 import Table from "react-bootstrap/Table";
 import Loader from "react-loader";
+import { Link } from "react-router-dom";
 
 const Wrapper = styled.div`
   padding: 0 15% 0 15%;
@@ -44,7 +45,9 @@ export default function MovieList(props) {
               return (
                 <tr key={movie._id}>
                   <td>{movie.rating}</td>
-                  <td>{movie.name}</td>
+                  <td>
+                    <Link to={`/movie/update/${movie._id}`}>{movie.name}</Link>
+                  </td>
                   <td>{movie.time.join(" / ")}</td>
                 </tr>
               );
