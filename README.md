@@ -54,6 +54,8 @@ npm start
 
 - Navbar (Using react-bootstrap)
 - MovieList (Using react-bootstrap)
+- Read movie list from database
+- Insert movie to database
 
 ```
 (Windows cmd, powershell)

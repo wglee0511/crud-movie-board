@@ -45,7 +45,7 @@ export default function MovieList(props) {
                 <tr key={movie._id}>
                   <td>{movie.rating}</td>
                   <td>{movie.name}</td>
-                  <td>{movie.time.join(" , ")}</td>
+                  <td>{movie.time.join(" / ")}</td>
                 </tr>
               );
             })}
