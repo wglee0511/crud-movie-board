@@ -4,6 +4,10 @@
 
 ![image](https://user-images.githubusercontent.com/69962377/112822014-59d33080-90c2-11eb-9edb-9feb9e87c70d.png)
 
+![image](https://user-images.githubusercontent.com/69962377/112822346-c77f5c80-90c2-11eb-8ffc-f04d0447fe19.png)
+
+![image](https://user-images.githubusercontent.com/69962377/112822426-e4b42b00-90c2-11eb-872c-450a9fb18071.png)
+
 - Create, Read, Update, Delete movies
 
 ---
